@@ -1,0 +1,69 @@
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="css/ionic.css">
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+    <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+    <script src="scripts/material.min.js"></script>
+    <script src="js/materialize.min.js"></script> 
+    <script type="text/javascript" src="phpptc/controller/json.js"></script>
+    <script type="text/javascript" src="phpptc/controller/productos.js"></script>  
+</head>
+
+<body>
+    <div class="bar bar-header bar-positive" style="margin-bottom:80px;">
+        <a href="inicio.html" class="button button-clear">Inicio</a>
+        <h1 class="title">Gestionar productos</h1>
+    </div>
+    <br/>
+    <br/>
+    <div class="list">
+        <input type="hidden" id="id" value="" />
+        <div class="item">
+            <label>Imagen</label>
+            <input type="text" id="imagen" value="" />
+        </div>
+        <div class="item">
+            <label>Producto</label>
+            <input type="text" id="producto" value="" />
+        </div>
+        <div class="item">
+            <label>Precio</label>
+            <input type="text" id="precio" value="" />
+        </div>
+        <div class="item">
+            <label>Cantidad</label>
+            <input type="text" id="cantidad" value="" />
+        </div>
+        <div class="item">
+            <label>Ingreso</label>
+            <input type="date" id="ingreso" value="" />
+        </div>
+        <div class="item">
+            <label>Caducidad</label>
+            <input type="date" id="caducidad" value="" />
+        </div>
+        <div class="item">
+            <label>Estado</label>
+            <select class="select" id="estado"></select>
+        </div>
+        <div class="item">
+            <label>Categoria</label>
+            <select class="select" id="categoria"></select>
+        </div>
+        <div class="item">
+            <label>Marca</label>
+            <select class="select" id="marca"></select>
+        </div>
+        <div class="item">
+            <label>Presentacion</label>
+            <select class="select" id="presentacion"></select>
+        </div>
+        <div class="item">
+            <input type="button" onclick="UpDeProducto()" class="button button-block" value="Update" />
+            <input type="button" onclick="DeleteProducto()" class="button button-block" value="Delete" />
+        </div>
+    </div>
+</body>
+
+</html>

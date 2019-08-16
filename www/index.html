@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <title>BOCATO </title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css" />
+    <link type="text/css" rel="stylesheet" href="css/icons.css" />
+    <link type="text/css" rel="stylesheet" href="styles/dashboard/loginpriv.css">
+    <link type="text/css" rel="stylesheet" href="styles/dashboard/jquery.mCustomScrollbar.min.css">    
+    <link type="text/css" rel="stylesheet" href="styles/toastr.min.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="login-box rgba-brown-light">
+            <!-- Default form login -->
+            <form class="text-center border border-light" id="form-login" method="post">
+                <h1 class="rgba-brown-strong white-text text-center title">
+                    <strong>Inicia Sesión</strong>
+                </h1>
+                <div class="p-5">
+                    <label for="correo" class="float-left"><i class="fas fa-at"></i> Correo Electrónico o Teléfono:
+                    </label>
+                    <input type="email" class="form-control" id="correo" name="correo" placeholder="" required>
+                    <label for="contra" class="float-left"><i class="fas fa-lock"></i> Contraseña: </label>
+                    <input type="password" class="form-control" id="contra" name="contra" placeholder="" required>
+                    <div class="d-flex justify-content-around">
+                        <div>
+                            <!-- Forgot password -->
+                            <a href="">¿Olvidaste tu contraseña?</a>
+                        </div>
+                    </div>
+                    <!-- Sign in button -->
+                    <button class="btn btn-info btn-block my-4" type="submit">Ingresar...</button>
+                    <!-- Register -->
+                    <p>¿Aún no te has registrado?
+                        <a href="registro.php">Registrate</a>
+                    </p>
+                </div>
+            </form>
+            <!-- Default form login -->
+        </div>
+    </div>
+    <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="js/materialize.min.js"></script>
+    <script type="text/javascript" src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script type="text/javascript" src="js/sweetalert.js"></script>
+    <script type="text/javascript" src="js/toastr.min.js"></script>
+    <script type="text/javascript" src="phpptc/helpers/functions.js"></script>
+    <script type="text/javascript" src="phpptc/helpers/components.js"></script>
+    <script type="text/javascript" src="phpptc/controller/account.js"></script>
+    <script type="text/javascript" src="phpptc/controller/index.js"></script>
+    <script type="text/javascript" src="js/dashboard.js"></script>
+</body>
+
+</html>

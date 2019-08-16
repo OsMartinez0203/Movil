@@ -1,0 +1,284 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background: white;
+}
+
+p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.1em;
+    font-weight: 300;
+    line-height: 1.7em;
+    color: #999;
+}
+
+.agregar{
+    position: relative;
+    margin-left: 100px;
+}
+#boton{
+    position: relative;
+    bottom: -7px;
+    height: 40px;
+}
+
+.busq{
+    position: relative;
+    left: 68px;
+    bottom: 38px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+ul {
+    margin: 0;
+}
+
+#cat{
+    height: 175px;
+}
+
+button,
+input[type='button'] {
+    cursor: pointer;
+}
+
+#form-create input:valid, textarea:valid {
+    transition: 0.5s, ease-in;
+    border-color:green;
+
+  }
+#form-create  input:invalid, textarea:invalid {
+    transition: 0.5s, ease-in;
+    border-color:red;
+  }
+
+ #form-update input:valid, textarea:valid {
+    transition: 0.5s, ease-in;
+    border-color:green;
+
+  }
+#form-update  input:invalid, textarea:invalid {
+    transition: 0.5s, ease-in;
+    border-color:red;
+  } 
+button:focus,
+input:focus,
+textarea:focus {
+    outline: none;
+}
+
+input, textarea {
+    border: none;
+}
+
+button {
+    border: none;
+    background: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+a,
+a:hover,
+a:focus {
+    color: inherit;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+.line {
+    width: 100%;
+    height: 1px;
+    border-bottom: 1px dashed #ddd;
+    margin: 40px 0;
+}
+
+/* SIDEBAR */
+
+.wrapper {
+    display: flex;
+    width: 100%;
+}
+
+i{
+    font-size: 10px;
+}
+
+#sidebar {
+    width: 250px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    z-index: 999;
+    background: #6d4c41;
+    transition: all 0.3s;
+    overflow: scroll;
+}
+
+#sidebar.active {
+    margin-left: -250px;
+}
+
+#sidebar .sidebar-header {
+    position: relative;
+    padding-top: 15px;
+    padding-bottom: 8px;
+    background: #fff;
+    color: #333;
+}
+
+#sidebar ul.components {
+    padding: 20px 0;
+    border-bottom: 1px solid white;
+}
+
+#sidebar ul p {
+    color: #6d4c41;
+    padding: 10px;
+}
+
+#sidebar ul li a {
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    font-size: 1.1em;
+    display: block;
+    color: #fff;
+}
+
+#sidebar ul li a:hover {
+    padding-left: 30px;
+    animation: ease-in-out .5s;
+    color: #6d4c41;
+    background: #fff;
+}
+
+#sidebar ul li.active>a,
+a[aria-expanded="true"] {
+    color: #6d4c41;
+    background: white;
+}
+
+a[data-toggle="collapse"] {
+    position: relative;
+}
+
+.dropdown-toggle::after {
+    display: block;
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    color: #6d4c41;
+}
+
+ul ul a {
+    font-size: 0.9em !important;
+    padding-left: 30px !important;
+    background: #6d4c41;
+    color: white;
+}
+
+ul.CTAs {
+    padding: 20px;
+}
+
+ul.CTAs a {
+    text-align: center;
+    font-size: 0.9em !important;
+    display: block;
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
+
+
+a.article,
+a.article:hover {
+    color: #6d4c41;
+}
+
+/* ---------------------------------------------------
+    CONTENT STYLE
+----------------------------------------------------- */
+
+#content {
+    width: calc(100% - 250px);
+    padding-bottom: 40px;
+    min-height: 100vh;
+    transition: all 0.3s;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.circulo{
+    width: 50px;
+}
+
+#content.active {
+    width: 100%;
+}
+
+
+.ah{
+    padding-bottom: 20px;
+    padding-top: 20px;
+}
+
+#sidebarCollapse{
+    display: none;
+    color: #6d4c41;
+}
+
+table tr{
+    width: 100% !important;
+    text-align: center;
+}
+
+.inside{
+    margin-left: 250px;
+}
+
+
+/* ---------------------------------------------------
+    MEDIAQUERIES
+----------------------------------------------------- */
+
+@media (max-width: 768px) {
+    #sidebar {
+        margin-left: -250px;
+    }
+    #sidebar.active {
+        margin-left: 0;
+    }
+    #content {
+        width: 100%;
+    }
+    #content.active {
+        width: calc(100% - 250px);
+    }
+
+    #sidebarCollapse{
+        display: inline;
+    }
+
+    .inside{
+        margin: 0px;
+    }
+
+}
+
+.botones{
+    padding: 10px;
+    margin: 5px;
+}

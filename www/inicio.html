@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Bocato</title>
+    <link href="styles/css.css" rel="stylesheet">
+    <link href="styles/icon.css" rel="stylesheet">
+    <link href="styles/material.indigo-pink.min.css" rel="stylesheet">
+    <link href="styles/main.css" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+</head>
+<body id="top">
+    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header"><a href="#" id="contact-button" class="mdl-button mdl-button--fab mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-color--accent mdl-color-text--accent-contrast mdl-shadow--4dp"><i class="material-icons">mail</i></a>
+        <header class="mdl-layout__header mdl-layout__header--waterfall site-header">
+            <div class="mdl-layout__header-row site-logo-row"><span class="mdl-layout__title">
+                <div class="site-logo"></div><span class="site-description">BOCATO - LACTEOS & DELIMARKET</span></span></div>
+            <div class="mdl-layout__header-row site-navigation-row mdl-layout--large-screen-only">
+                <nav class="mdl-navigation mdl-typography--body-1-force-preferred-font transparent">
+                    <a class="mdl-navigation__link" href="inicio.html">Inicio</a>
+                    <a class="mdl-navigation__link" href="productos.html">Productos</a>
+                    <a class="mdl-navigation__link" href="reservas.html">Reservas</a>
+                    <a href="#" class="mdl-navigation__link dropdown-trigger" data-target="dropdown">¡Usuario!</a>
+                </nav>
+            </div>
+        </header>
+        <div class="mdl-layout__drawer mdl-layout--small-screen-only">
+            <nav class="mdl-navigation mdl-typography--body-1-force-preferred-font transparent">
+                <a class="mdl-navigation__link" href="inicio.html">Inicio</a>
+                <a class="mdl-navigation__link" href="productos.html">Productos</a>
+                <a class="mdl-navigation__link" href="reservas.html">Reservas</a>
+                <li><a href="#" class="mdl-navigation__link dropdown-trigger" data-target="dropdown2">¡Usuario!</a></li>
+            </nav>
+        </div>
+        </header>
+        <div class="mdl-layout__drawer mdl-layout--small-screen-only">
+            <nav class="mdl-navigation mdl-typography--body-1-force-preferred-font transparent">
+                <a class="mdl-navigation__link" href="inicio.html">Inicio</a>
+                <a class="mdl-navigation__link" href="productos.html">Productos</a>
+                <a class="mdl-navigation__link" href="reservas.html">Reservas</a>
+                <li><a href="#" class="mdl-navigation__link dropdown-trigger" data-target="dropdown3">¡Usuario!</a></li>
+            </nav>
+        </div>
+        <!--Dropdowns-->
+        <!-- Dropdown Structure -->
+        <ul id="dropdown" class="dropdown-content">
+            <li><a href="#"><i class="material-icons">face</i>Editar perfil</a></li>
+            <li><a href="#"><i class="material-icons">lock</i>Cambiar Contraseña</a></li>
+            <li><a href="#" onclick="signOff()"><i class="material-icons">clear</i>Salir</a></li>
+        </ul>
+        <!-- Dropdown Structure -->
+        <ul id="dropdown2" class="dropdown-content">
+            <li><a href="#"><i class="material-icons">face</i>Editar perfil</a></li>
+            <li><a href="#"><i class="material-icons">lock</i>Cambiar Contraseña</a></li>
+            <li><a href="#" onclick="signOff()"><i class="material-icons">clear</i>Salir</a></li>
+        </ul>
+        <!-- Dropdown Structure -->
+        <ul id="dropdown3" class="dropdown-content">
+            <li><a href="#"><i class="material-icons">face</i>Editar perfil</a></li>
+            <li><a href="#"><i class="material-icons">lock</i>Cambiar Contraseña</a></li>
+            <li><a href="#" onclick="signOff()"><i class="material-icons">clear</i>Salir</a></li>
+        </ul>
+    <main class="mdl-layout__content">
+        <div class="site-content">
+        <div class="container"><div class="mdl-grid site-max-width">
+    <div class="mdl-cell mdl-cell--12-col mdl-card mdl-shadow--4dp welcome-card portfolio-card row">
+        <div class="col lg12 md12 sm12">
+            <canvas id="lineal"></canvas>
+        </div>
+    </div>
+</div>
+<h1 class="center">Productos:</h1>
+<section class="section--center mdl-grid site-max-width">
+    <div class="mdl-cell mdl-card mdl-shadow--4dp portfolio-card">
+        <div class="mdl-card__media">
+            <img class="article-image" src="img/b.png" border="0" alt="">
+        </div>
+        <div class="mdl-card__title">
+            <h2 class="mdl-card__title-text">Quesos</h2>
+        </div>
+        <div class="mdl-card__supporting-text">
+            Enim labore aliqua consequat ut quis ad occaecat aliquip incididunt. Sunt nulla eu enim irure enim nostrud aliqua consectetur ad consectetur sunt ullamco officia. Ex officia laborum et consequat duis.
+        </div>
+    </div>
+    <div class="mdl-cell mdl-card mdl-shadow--4dp portfolio-card">
+        <div class="mdl-card__media">
+            <img class="article-image" src="img/a.png" border="0" alt="">
+        </div>
+        <div class="mdl-card__title">
+            <h2 class="mdl-card__title-text">Vinos</h2>
+        </div>
+        <div class="mdl-card__supporting-text">
+            Enim labore aliqua consequat ut quis ad occaecat aliquip incididunt. Sunt nulla eu enim irure enim nostrud aliqua consectetur ad consectetur sunt ullamco officia. Ex officia laborum et consequat duis.            
+        </div>
+    </div>
+    <div class="mdl-cell mdl-card mdl-shadow--4dp portfolio-card">
+        <div class="mdl-card__media">
+            <img class="article-image" src="img/miel.jpeg" border="0" alt="">
+        </div>
+        <div class="mdl-card__title">
+            <h2 class="mdl-card__title-text">Miel</h2>
+        </div>
+        <div class="mdl-card__supporting-text">
+            Enim labore aliqua consequat ut quis ad occaecat aliquip incididunt. Sunt nulla eu enim irure enim nostrud aliqua consectetur ad consectetur sunt ullamco officia. Ex officia laborum et consequat duis.
+        </div>
+    </div>
+</section>
+
+<section class="section--center mdl-grid site-max-width homepage-portfolio">
+    <a class="mdl-button mdl-button--raised mdl-js-button mdl-js-ripple-effect mdl-button--accent" href="productos.html">Ir a productos</a>
+</section>
+
+<div class="homepage-footer">
+<section class="mdl-grid site-max-width">
+    <div class="mdl-cell mdl-card mdl-cell--12-col mdl-cell--4-col-tablet  mdl-shadow--4dp portfolio-card">
+        <div class="mdl-card__title">
+            <h2 class="mdl-card__title-text">Comentarios a evaluar:</h2>
+        </div>
+        <ul class="demo-list-three mdl-list">
+            <li class="mdl-list__item mdl-list__item--three-line">
+            <span class="mdl-list__item-primary-content">
+                <i class="material-icons mdl-list__item-avatar">person</i>
+                <span>No sirve!</span>
+                <span class="mdl-list__item-text-body">
+                Soyapango, El Salvador
+                </span>
+            </span>
+            </li>
+            <li class="mdl-list__item mdl-list__item--three-line">
+            <span class="mdl-list__item-primary-content">
+                <i class="material-icons  mdl-list__item-avatar">person</i>
+                <span>Muy bueno, pero puede mejorar...</span>
+                <span class="mdl-list__item-text-body">
+                Ciudad Delgado El Salvador
+                </span>
+            </span>
+            </li>
+        </ul>
+    </div>
+</section>
+</div></div>
+        </div>
+        <footer class="mdl-mini-footer">
+        <div class="footer-container">
+            <div class="mdl-logo">&copy;  Bocato lacteos & delimarket: <a href="#" target="_blank">Derechos Reservados 2019</a></div>
+            <ul class="mdl-mini-footer__link-list">
+            <li><a href="#">Terminos y condiciones</a></li>
+            </ul>
+        </div>
+        </footer>
+    </main>
+    <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="js/materialize.min.js"></script>
+    <script src="scripts/material.min.js"></script>
+    <script type="text/javascript" src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script type="text/javascript" src="js/sweetalert.js"></script>
+    <script type="text/javascript" src="js/toastr.min.js"></script>
+    <script type="text/javascript" src="phpptc/helpers/functions.js"></script>
+    <script type="text/javascript" src="phpptc/helpers/components.js"></script>
+    <script type="text/javascript" src="phpptc/controller/account.js"></script>
+    <script type="text/javascript" src="js/dashboard.js"></script> 
+    </div>
+</body>
+</html>

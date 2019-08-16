@@ -1,0 +1,128 @@
+#navbar ul{
+  margin: 12px;
+}
+
+.navbar {
+  background-color: transparent;
+}
+.scrolling-navbar {
+  transition: background .5s ease-in-out, padding .5s ease-in-out;
+}
+.top-nav-collapse {
+  background-color: rgba(121, 85, 72, 0.8);
+}
+footer.page-footer {
+  background-color: #fff;
+  color: black;
+}
+@media only screen and (max-width: 576px) {
+  .navbar {
+    background-color: #CD8C52;
+  }
+}
+
+.nav-item{
+  margin-right: 5%;
+}
+
+.contenedor{
+  display: inline;
+  margin-left: 80%;
+}
+
+#navbar li a {
+display:block; 
+width:100%;
+text-decoration:none;
+}
+
+#navbar li a:hover {
+display:block; 
+width:100%;
+color: #333;
+background-color: rgb(252,247,211);
+text-decoration:none;
+margin-right: 10px;
+}
+
+
+/* Necessary for full page carousel*/
+  html,
+  body,
+  .view {
+    height: 100%;
+  }
+
+  /* Carousel*/
+  .carousel,
+  .carousel-item,
+  .carousel-item.active {
+    height: 100%;
+  }
+  .carousel-inner {
+    height: 100%;
+  }
+  .carousel-item:nth-child(1) {
+    background-image: url("../../img/slider/a.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+  }
+  .carousel-item:nth-child(2) {
+    background-image: url("../../img/slider/b.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+  }
+  .carousel-item:nth-child(3) {
+    background-image: url("../../img/slider/c.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+  }
+
+.titulo{
+  margin: 5%;
+  
+}
+
+img.img-fluid{
+  height: 100%;
+  image-rendering: optimizeQuality;
+}
+
+.cat{
+  margin-top: 3%;
+  margin-bottom: 3%;
+  height: 250px;
+}
+
+.ef {
+  /* The image used */
+  background-image: url('../../img/todobocato.jpeg');
+  height: 300px; 
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.eff {
+  /* The image used */
+  background-image: url('../../img/fueradebocato.jpeg');
+  height: 370px; 
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.footer{
+  color: #fff;
+  padding: 1em;
+}
+
+.val{
+  height: 120px;
+  position: inline-block;
+}

@@ -1,0 +1,44 @@
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="css/ionic.css">
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+    <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+    <script src="scripts/material.min.js"></script>
+    <script src="js/materialize.min.js"></script> 
+    <script type="text/javascript" src="phpptc/controller/json.js"></script>
+    <script type="text/javascript" src="phpptc/controller/reservas.js"></script>
+</head>
+
+<body>
+    <div class="bar bar-header bar-positive" style="margin-bottom:80px;">
+        <h1 class="title">Insertar</h1>
+        <a class="button button-clear" href="reservas.html">Reservas</a>
+    </div>
+    <br/>
+    <br/>
+    <div class="list">
+        <input type="hidden" id="id_producto" value="" />
+        <div class="item">
+            <label>Fecha de reserva</label>
+            <input type="date" id="fecha" value="" />
+        </div>
+        <div class="item">
+            <label>Cliente</label>
+            <select id="cliente" class="select"></select>
+        </div>
+        <div class="item">
+            <label>Producto</label>
+            <select id="producto" class="select"></select>
+        </div>
+        <div class="item">
+            <label>Cantidad</label>
+            <input type="text" id="cantidad" value="" />
+        </div>
+        <div class="item">
+            <input type="button" onclick="insertReserva()" class="button button-block" value="Insertar"/>
+        </div>
+    </div>    
+</body>
+
+</html>

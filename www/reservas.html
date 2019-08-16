@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Bocato</title>
+    <link href="styles/css.css" rel="stylesheet">
+    <link href="styles/icon.css" rel="stylesheet">
+    <link href="styles/material.indigo-pink.min.css" rel="stylesheet">
+    <link href="styles/main.css" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+    <script src="scripts/jquery-2.2.3.min.js"></script>
+    <script src="scripts/material.min.js"></script>
+    <script src="js/materialize.min.js"></script>
+    <script src="js/menu.js"></script>  
+    <script type="text/javascript">
+        $(document).ready(function() {
+            var url = "phpptc/readreservas.php";
+            $.getJSON(url, function(result) {
+                console.log(result);
+                $.each(result, function(i, field) { 
+                    var id_apartado = field.id_apartado;
+                    var nombre_cliente = field.nombre_cliente;
+                    var nombre_producto = field.nombre_producto;
+                    var fecha_reserva = field.fecha_reserva;
+                    var Cant = field.Cant;                    
+                    $('#listview').append('<tr>' +
+                            '<td>' + nombre_cliente + '</td>' + 
+                            '<td>'+ nombre_producto + '</td>' + 
+                            '<td>' + fecha_reserva + '</td>' +
+                            '<td>' + Cant + '</td>' +
+                            '<td><a class="item" href="formreservas.html?id_apartado=' + id_apartado + 
+                        '&nombre_cliente=' + nombre_cliente + '&nombre_producto=' + nombre_producto + '&fecha_reserva=' + fecha_reserva +
+                        '&Cant=' + Cant + '"><i class="material-icons">edit</i></a></td>' +
+                    '</tr>');
+                });
+            });
+        });
+    </script>
+</head>
+<body id="top">
+    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header"><a href="insertreservas.html" id="contact-button" class="mdl-button mdl-button--fab mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-color--accent mdl-color-text--accent-contrast mdl-shadow--4dp"><i class="material-icons">add</i></a>
+        <header class="mdl-layout__header mdl-layout__header--waterfall site-header">
+            <div class="mdl-layout__header-row site-logo-row"><span class="mdl-layout__title">
+                <div class="site-logo"></div><span class="site-description">BOCATO - LACTEOS & DELIMARKET</span></span></div>
+            <div class="mdl-layout__header-row site-navigation-row mdl-layout--large-screen-only">
+                <nav class="mdl-navigation mdl-typography--body-1-force-preferred-font transparent">
+                    <a class="mdl-navigation__link" href="inicio.html">Inicio</a>
+                    <a class="mdl-navigation__link" href="productos.html">Productos</a>
+                    <a class="mdl-navigation__link" href="reservas.html">Reservas</a>
+                    <a href="#" class="mdl-navigation__link dropdown-trigger" data-target="dropdown">¡Usuario!</a>
+                </nav>
+            </div>
+        </header>
+        <div class="mdl-layout__drawer mdl-layout--small-screen-only">
+            <nav class="mdl-navigation mdl-typography--body-1-force-preferred-font transparent">
+                <a class="mdl-navigation__link" href="inicio.html">Inicio</a>
+                <a class="mdl-navigation__link" href="productos.html">Productos</a>
+                <a class="mdl-navigation__link" href="reservas.html">Reservas</a>
+                <li><a href="#" class="mdl-navigation__link dropdown-trigger" data-target="dropdown2">¡Usuario!</a></li>
+            </nav>
+        </div>
+        </header>
+        <div class="mdl-layout__drawer mdl-layout--small-screen-only">
+            <nav class="mdl-navigation mdl-typography--body-1-force-preferred-font transparent">
+                <a class="mdl-navigation__link" href="inicio.html">Inicio</a>
+                <a class="mdl-navigation__link" href="productos.html">Productos</a>
+                <a class="mdl-navigation__link" href="reservas.html">Reservas</a>
+                <li><a href="#" class="mdl-navigation__link dropdown-trigger" data-target="dropdown3">¡Usuario!</a></li>
+            </nav>
+        </div>
+        <!--Dropdowns-->
+        <!-- Dropdown Structure -->
+        <ul id="dropdown" class="dropdown-content">
+            <li><a href="#"><i class="material-icons">face</i>Editar perfil</a></li>
+            <li><a href="#"><i class="material-icons">lock</i>Cambiar Contraseña</a></li>
+            <li><a href="#"><i class="material-icons">clear</i>Salir</a></li>
+        </ul>
+        <!-- Dropdown Structure -->
+        <ul id="dropdown2" class="dropdown-content">
+            <li><a href="#"><i class="material-icons">face</i>Editar perfil</a></li>
+            <li><a href="#"><i class="material-icons">lock</i>Cambiar Contraseña</a></li>
+            <li><a href="#"><i class="material-icons">clear</i>Salir</a></li>
+        </ul>
+        <!-- Dropdown Structure -->
+        <ul id="dropdown3" class="dropdown-content">
+            <li><a href="#"><i class="material-icons">face</i>Editar perfil</a></li>
+            <li><a href="#"><i class="material-icons">lock</i>Cambiar Contraseña</a></li>
+            <li><a href="#"><i class="material-icons">clear</i>Salir</a></li>
+        </ul>
+
+        <main class="mdl-layout__content">
+            <div class="site-content">
+            <div class="mdl-grid site-max-width">
+                <div class="mdl-cell mdl-cell--12-col mdl-card mdl-shadow--4dp page-content">
+                <div class="mdl-card__title">
+                    <h1 class="mdl-card__title-text">Reservas de productos</h1>
+                </div>
+                <div class="mdl-card__media">
+                    <img class="article-image" src="img/about.jpg" border="0" alt="About">
+                </div>
+                <div class="mdl-card__media transparent">
+                    <table class="striped responsive-table centered">
+                        <thead>
+                            <tr>
+                                <th>Cliente</th>
+                                <th>Producto</th>
+                                <th>Fecha de reserva</th>
+                                <th>Cantidad</th>
+                                <th>Accion</th>
+                            </tr>
+                        </thead>
+                        <tbody class="list" id="listview"> 
+                                      
+                        </tbody>                        
+                    </table>                              
+                </div>
+                </div>
+            </div>
+            </div>
+            <footer class="mdl-mini-footer">
+                <div class="footer-container">
+                    <div class="mdl-logo">&copy;  Bocato lacteos & delimarket: <a href="#" target="_blank">Derechos Reservados 2019</a></div>
+                    <ul class="mdl-mini-footer__link-list">
+                    <li><a href="#">Terminos y condiciones</a></li>
+                    </ul>
+                </div>
+            </footer>
+        </main>                      
+    </div>
+</body>
+</html>

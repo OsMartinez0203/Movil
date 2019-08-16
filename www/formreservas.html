@@ -1,0 +1,115 @@
+<html>
+
+<head>
+        <link rel="stylesheet" type="text/css" href="css/ionic.css">
+        <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+        <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+        <script src="scripts/material.min.js"></script>
+        <script src="js/materialize.min.js"></script> 
+        <script type="text/javascript" src="phpptc/controller/json.js"></script>
+        <script type="text/javascript" src="phpptc/controller/reservas.js"></script>
+        <script type="text/javascript" src="js/geturi.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var id_apartado = decodeURI(getUrlVars()["id_apartado"]);
+                var cliente = decodeURI(getUrlVars()["id_cliente"]);
+                var producto = decodeURI(getUrlVars()["id_producto"]);
+                var fecha = decodeURI(getUrlVars()["fecha_reserva"]);
+                var cantidad = decodeURI(getUrlVars()["Cant"]);
+                
+                $("#id_apartado").val(id_apartado);
+                $("#cliente").val(cliente);
+                $("#producto").val(producto);
+                $("#fecha").val(fecha);
+                $("#cantidad").val(cantidad);
+
+                $("#update").click(function() {
+                    var id_apartado = $("#id_apartado").val();
+                    var cliente = $("#cliente").val();
+                    var producto = $("#producto").val();
+                    var fecha = $("#fecha").val();
+                    var cantidad = $("#cantidad").val();
+                    var dataString = "id_apartado=" + id_apartado + "&cliente=" + cliente + "&producto=" + producto + "&fecha=" + fecha + "&cantidad=" + cantidad;
+                    alert(dataString);
+                    $.ajax({
+                        type: "POST",
+                        url: "phpptc/updatereservas.php",
+                        data: dataString,
+                        crossDomain: true,
+                        cache: false,
+                        beforeSend: function() {
+                            $("#update").val('Connecting...');
+                            alert("Mozote");
+                        },
+                        success: function(data) {
+                            if (data == "success") {
+                                alert("Updated");
+                                $("#update").val("Update");
+                            } else if (data == "error") {
+                                alert("error");
+                            }
+                        }
+                    });
+
+                });
+
+                $("#delete").click(function() {
+                    var id = $("#id").val();
+                    var dataString = "id=" + id + "&delete=";
+                    $.ajax({
+                        type: "GET",
+                        url: "phpptc/deleteres.php",
+                        data: dataString,
+                        crossDomain: true,
+                        cache: false,
+                        beforeSend: function() {
+                            $("#delete").val('Connecting...');
+                        },
+                        success: function(data) {
+                            if (data == "success") {
+                                alert("Deleted");
+                                $("#delete").val("Delete");
+                            } else if (data == "error") {
+                                alert("error");
+                            }
+                        }
+                    });
+
+                });
+            });
+        </script>
+</head>
+
+<body>
+    <div class="bar bar-header bar-positive" style="margin-bottom:80px;">
+        <a href="inicio.html" class="button button-clear">Inicio</a>
+        <h1 class="title">Gestionar reservas</h1>
+    </div>
+    <br/>
+    <br/>
+    <div class="list">
+        <input type="hidden" id="id_apartado" value="" />
+        <div class="item">
+            <label>Cliente</label>
+            <select id="cliente" class="select"></select>
+        </div>
+        <div class="item">
+            <label>Producto</label>
+            <select id="producto" class="select"></select>
+        </div>
+        <div class="item">
+            <label>Fecha</label>
+            <input type="date" id="fecha" value="" />
+        </div>
+        <div class="item">
+            <label>Cantidad</label>
+            <input type="text" id="cantidad" value="" />
+        </div>
+        <div class="item">
+            <input type="button" id="update" class="button button-block" value="Update" /> 
+            <input type="button" id="delete" class="button button-block" value="Delete" />
+        </div>
+    </div>
+</body>
+
+</html>
